@@ -6,8 +6,21 @@ for (var i =0; i< NumOfDrumButton; i++)
     
     var buttonInnerHTML =this.innerHTML;
 
+    makesound(buttonInnerHTML)
+    
+    
+    });
 
-        switch (buttonInnerHTML) 
+}
+
+document.addEventListener("keypress",function(event){
+    makesound(event.key)  
+}
+);
+
+function makesound(key){
+
+    switch (key) 
         {
             case "w": 
                 var tom1 = new Audio("sound/tom-1.mp3");
@@ -48,8 +61,5 @@ for (var i =0; i< NumOfDrumButton; i++)
             
 
         }
-    });
-
 }
-
   
